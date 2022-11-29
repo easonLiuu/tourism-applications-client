@@ -31,11 +31,15 @@ export default defineConfig({
           auth: true
         },
         {
-          path: '/user',
-          component: './user/index',
-          title: '我的',
-          auth: true
-        },
+          path: '/search',
+          component: './search/index',
+          title: '搜索',
+        }, 
+        {
+          path: '/observer',
+          component: './observer',
+          title: '搜索',
+        },        
       ]
     }
   ],
