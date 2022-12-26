@@ -38,8 +38,13 @@ export default defineConfig({
         {
           path: '/observer',
           component: './observer',
-          title: '搜索',
-        },        
+          title: 'observer',
+        },
+        {
+          path: '/house',
+          component: './house',
+          title: '房屋详情',
+        },         
       ]
     }
   ],
