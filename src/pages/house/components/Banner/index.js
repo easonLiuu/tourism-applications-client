@@ -18,13 +18,13 @@ export default function(props){
 
   return (
     <AwesomeSwiper className='banner' config={config}>     
-            {props?.banner?.map(item => {
+            {props?.banner?.map(item => (
                 <div className='swiper-wrapper' key={item.id}>
                     <div className='swiper-slide'>
                         <img alt='banner' src={item}/>
                     </div>
                 </div>
-            })}           
+            ))}           
         <div className='swiper-pagination'></div>
     </AwesomeSwiper>
   )
