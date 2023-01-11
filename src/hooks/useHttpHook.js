@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Http } from '@/utils'
 
-
 export default function useHttpHook({
   url,
   method = 'post',
@@ -11,8 +10,6 @@ export default function useHttpHook({
 }){
   const [result, setResult] = useState();
   const [loading, setLoading] = useState(true);
-
- 
 
   useEffect(()=>{
     Http({
