@@ -31,6 +31,17 @@ export default defineConfig({
           auth: true
         },
         {
+          path: '/user/edit',
+          component: './user/edit',
+          title: '设置用户',
+        },
+        {
+          path: '/user',
+          component: './user/index',
+          title: '我的',
+          auth: true
+        },
+        {
           path: '/search',
           component: './search/index',
           title: '搜索',
