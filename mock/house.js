@@ -2,7 +2,7 @@ export default {
   'post /api/house/search': (req, res) => {
     setTimeout(() => {
       let data;
-      if(req.body.pageNum < 4){
+      if(req.body.pageNum < 4) {
         data =  [
           {
             id: 1,
@@ -61,9 +61,9 @@ export default {
             price: '220'
           },
         ]
-      }else {
+      }else{
         data = []
-      }
+      }      
       res.json({
         status: 200,
         data

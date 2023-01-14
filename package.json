@@ -8,10 +8,10 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "dayjs": "^1.8.29",
-    "project-libs": "^1.1.3",
+    "dayjs": "^1.11.6",
+    "project-libs": "^1.1.8",
     "prop-types": "^15.7.2",
-    "rc-form": "^2.4.11",
+    "rc-form": "^2.4.12",
     "react": "^16.13.1",
     "react-awesome-swiper": "^1.4.16",
     "react-dom": "^16.13.1",

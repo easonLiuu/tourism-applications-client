@@ -21,7 +21,7 @@ const Styles = {
     justifyContent: 'center',
   },
   close: {
-    position: 'fixed',
+    position: 'absolute',
     top: '10px',
     right: '10px'
   }
@@ -32,8 +32,14 @@ export default class Modal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      showModal: false
     };
+  }
+
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      showModal: nextProps.show
+    })
   }
 
   handleClose = ()=>{
@@ -42,13 +48,23 @@ export default class Modal extends Component {
   }
 
   render() {
-    const { show } = this.props;
+    const { show, styleBody, styleClose } = this.props;
+    const { showModal } = this.state;
+    const _styleBody = {
+      ...Styles.body,
+      ...styleBody
+    };
+
+    const _styleClose = {
+      ...Styles.close,
+      ...styleClose
+    }
     return (
       <>
-        {show ? <CreatePortal style={Styles.modal}>
-          <div style={Styles.body}>
+        {showModal ? <CreatePortal style={Styles.modal}>
+          <div style={_styleBody}>
             {this.props.children}
-            <Icon type='cross' size='lg' style={Styles.close} onClick={this.handleClose} />
+            <Icon type='cross' size='lg' style={_styleClose} onClick={this.handleClose} />
           </div>
         </CreatePortal> : null}
       </>
