@@ -2,7 +2,7 @@ export default {
   'post /api/commons/citys': (req, res) => {
     res.json({
       status: 200,
-      data: [[{ label: '杭州', value: '10001' }, { label: '苏州', value: '10002' }]]
+      data: [[{ label: '黄岛区', value: '10001' }, { label: '市南区', value: '10002' }]]
     });
   },
   'post /api/house/hot': (req, res) => {
