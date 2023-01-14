@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { history } from 'umi';
 
-export default function(props){
-
+function Hot(props){
   const handleClick = (id) => {
     history.push({
       pathname: '/house',
@@ -33,3 +32,5 @@ export default function(props){
     </div>
   )
 }
+
+export default memo(Hot);
