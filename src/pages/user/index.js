@@ -6,7 +6,7 @@ import { useStoreHook } from 'think-react-store';
 import './index.less'
 
 export default function(props){
-  const { user: { username, avatar, tel, sign, getUserAsync, logoutAsync }} = useStoreHook();
+  const { user: { username, avatar, phone, sign, getUserAsync, logoutAsync }} = useStoreHook();
   const [state, setState] = useState()
 
   const handleClick = () => {
@@ -35,7 +35,7 @@ export default function(props){
         <div className='set' onClick={handleClick}>设置</div>
         <div className='user'>
           <img alt="user" src={avatar || require('../../assets/yay.jpg')}/>
-          <div className='tel'>{tel}</div>
+          <div className='tel'>{phone}</div>
           <div className='sign'>{sign}</div>
         </div>
       </div>

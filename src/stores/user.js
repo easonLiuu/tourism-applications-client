@@ -8,7 +8,7 @@ export default {
         id: undefined,
         username: undefined,
         avatar: undefined,
-        tel: undefined,
+        phone: undefined,
         sign: undefined
     },
     reducers: {
