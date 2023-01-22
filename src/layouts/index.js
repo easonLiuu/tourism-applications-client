@@ -1,5 +1,5 @@
 import styles from './index.css';
-import { ErrorBoundary , MenuBar } from '@/components';
+import { MenuBar } from '@/components';
 import { useLocation } from 'umi';
 import { StoreProvider } from 'think-react-store';
 import * as store from '../stores';
@@ -14,9 +14,7 @@ function BasicLayout(props) {
        show={paths.includes(location.pathname)}
        pathname={location.pathname}
       /> 
-      <ErrorBoundary>
       {props.children}
-      </ErrorBoundary>
     </StoreProvider>
   );
 }
