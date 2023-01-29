@@ -28,10 +28,10 @@ export default function(props){
         <Header />
 
         {/** search搜索 */}
-        <Search citys={citys} citysLoading={citysLoading} />
+        {citys && <Search citys={citys} citysLoading={citysLoading} />}
 
         {/** 热门民宿 */}
-        <Hot houses={houses}/>
+        {houses && <Hot houses={houses}/>}
 
       </div>
 
