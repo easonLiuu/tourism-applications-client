@@ -91,9 +91,9 @@ export default function(props){
       {!houseLists.length ? <ActivityIndicator toast/> : <div className='result'>
         {houseLists.map(item => (
             <div className='item' key={item.id}> 
-            <img alt='img' className='item-img' src={require('../../assets/blank.png')} data-src={item.img}/>
+            <img alt='img' className='item-img' src={require('../../assets/blank.png')} data-src={item?.imgs[0]?.url}/>
             <div className='item-right'>
-                <div className='title'>{item.title}</div>
+                <div className='title'>{item.name}</div>
                 <div className='price'>{item.price}</div>
             </div>
         </div>
