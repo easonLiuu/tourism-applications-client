@@ -21,7 +21,7 @@ export default function(props){
             {props?.banner?.map(item => (
                 <div className='swiper-wrapper' key={item.id}>
                     <div className='swiper-slide'>
-                        <img alt='banner' src={item}/>
+                        <img alt='banner' src={item.url}/>
                     </div>
                 </div>
             ))}           
