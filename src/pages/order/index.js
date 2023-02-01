@@ -23,7 +23,7 @@ export default function(props){
   
   const invokeHttp = async (pageNum) => {
     const result = await Http({
-      url: '/order/lists',
+      url: '/orders/lists',
       body: {
         ...page,
         pageNum,
@@ -41,7 +41,7 @@ export default function(props){
     //   }
     // });
     const result = await invokeHttp(pageNum);
-    if(!isEmpty(result) && result.length === page.pageSize) {
+    if(!isEmpty(result) && result.length <= page.pageSize) {
       setOrders(result);
       setShowLoading(true);
     }else{
